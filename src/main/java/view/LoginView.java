@@ -35,8 +35,8 @@ public class LoginView extends JFrame {
             return;
         }
         this.dispose();
-        InfoSearchView bv = new InfoSearchView();
-        bv.setVisible(true);
+        BookingView bookingView = new BookingView();
+        bookingView.setVisible(true);
     }
 
     public static void main(String[] args) {

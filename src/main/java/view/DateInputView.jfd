@@ -4,10 +4,34 @@ new FormModel {
 	contentType: "form/swing"
 	root: new FormRoot {
 		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
-			"$horizontalGroup": "par l {space :0:400:x}"
-			"$verticalGroup": "par l {space :0:300:x}"
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp label1::l:p::p, comp label2::l:p::p}, space s:::p, par l {comp txtEnddate::::318:x, comp txtStartdate::::318:x}, space :::p}, seq l {space :p:21:p, comp subSelect:::p::p, space ::160:x, comp subconfirm:::p::p, space :p:61:p}}"
+			"$verticalGroup": "par l {seq l {space :p:34:p, par b {comp label1::b:p::p, comp txtStartdate::b:p::p}, space :p:24:p, par b {comp label2::b:p::p, comp txtEnddate::b:p::p}, space :p:31:p, par b {comp subSelect::b:p::p, comp subconfirm::b:p::p}, space ::89:x}}"
 		} ) {
 			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Start date"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "End date"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtStartdate"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtEnddate"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "subSelect"
+				"text": "Select"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "subSelect", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "subconfirm"
+				"text": "Confirm"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "subconfirm", true ) )
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 0, 0 )
 			"size": new java.awt.Dimension( 400, 300 )

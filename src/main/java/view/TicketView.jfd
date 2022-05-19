@@ -1,0 +1,30 @@
+JFDML JFormDesigner: "7.0.5.1.409" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space ::40:x, par l {seq t {comp label1:::p::p, space :p:146:p}, seq t {comp scrollPane1:::p:327:p, space :p:31:p}, seq t {comp subprint:::p::p, space :p:151:p}}}}"
+			"$verticalGroup": "par l {seq t {space :p:30:p, comp label1:::p::p, space s:::p, comp scrollPane1:::p:180:p, space s:::p, comp subprint:::p::p, space :::x}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTextArea" ) {
+					name: "txtTicket"
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Booking Ticket"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "subprint"
+				"text": "Print"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 400, 330 )
+		} )
+	}
+}

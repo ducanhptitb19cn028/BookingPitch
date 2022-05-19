@@ -83,22 +83,9 @@ public class InfoSearchView extends JFrame {
 
     private void tableCustomerMouseClicked(MouseEvent e) {
         // TODO add your code here
-        ListSelectionModel cellSelectionModel = tableCustomer.getSelectionModel();
-        cellSelectionModel.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
-
-        cellSelectionModel.addListSelectionListener(e1 -> {
-            String selectedData = null;
-
-            int[] selectedRow = tableCustomer.getSelectedRows();
-            int[] selectedColumns = tableCustomer.getSelectedColumns();
-
-            for (int k : selectedRow) {
-                for (int selectedColumn : selectedColumns) {
-                    selectedData = (String) tableCustomer.getValueAt(k, selectedColumn);
-                }
-            }
-            System.out.println("Selected: " + selectedData);
-        });
+        this.dispose();
+        DateInputView dtv = new DateInputView();
+        dtv.setVisible(true);
     }
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
