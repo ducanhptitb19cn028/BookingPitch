@@ -1,0 +1,65 @@
+JFDML JFormDesigner: "7.0.5.1.409" Java: "11.0.14.1" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp scrollPane1::l::476:x, seq l {par t {comp subSearcg:::p::p, par l {comp label1::l:p::p, comp label2::l:p::p}}, space s:::p, par l {comp txtTimeslot::::380:x, comp txtType:::::x}}}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :p:36:p, par b {comp label1::b:p::p, comp txtTimeslot::b:p::p}, space s:::p, par b {comp label2::b:p::p, comp txtType::b:p::p}, space ::22:x, comp subSearcg:::p::p, space s:::p, comp scrollPane1:::p:107:p, space :p:42:p}}"
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "Time slot:"
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Type"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtTimeslot"
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "txtType"
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "scrollPane1"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "tblEmptyPitch"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+						add( "ID" )
+						add( "Pitch type" )
+						add( "Time slot" )
+						add( "Price" )
+						add( "Status" )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					}, new java.util.Vector {
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+						add( null )
+					} )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "subSearcg"
+				"text": "Search"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 15, 80 )
+			"size": new java.awt.Dimension( 490, 365 )
+		} )
+	}
+}
